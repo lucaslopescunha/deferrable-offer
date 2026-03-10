@@ -40,5 +40,9 @@
     TypeScript concepts which are especially important for Angular developers!
   </p>
 </section>
-
-<app-offer-preview />
+<!-- Loads only if scroll to the point -->
+@defer (on viewport) {
+  <app-offer-preview />
+} @placeholder {
+  <p>We might have an offer</p>
+}
