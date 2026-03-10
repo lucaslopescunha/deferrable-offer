@@ -40,9 +40,10 @@
     TypeScript concepts which are especially important for Angular developers!
   </p>
 </section>
+<button type="button" #greeting class="button">OK</button>
 <!-- Loads only if you in the paragraph -->
-@defer (on interaction) {
+@defer (on interaction(greeting)) {
   <app-offer-preview />
 } @placeholder {
-  <p>We might have an offer</p>
+  <p class="fallback">We might have an offer</p>
 }
